@@ -84,5 +84,3 @@ module.exports = {
     fizzbuzz,
     countChar
 }
-
-console.log(countChar("Hello", 'o'))
