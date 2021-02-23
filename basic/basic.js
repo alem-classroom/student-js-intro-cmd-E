@@ -63,7 +63,8 @@ const fizzbuzz = (N) => {
 
 const countChar = (str, char = 'c') => {
     let count = 0
-    str.forEach(c => {
+    let charsOfStr = [...str]
+    charsOfStr.forEach(c => {
         if (c === char) count++
     });
     return count
@@ -83,3 +84,5 @@ module.exports = {
     fizzbuzz,
     countChar
 }
+
+console.log(countChar("Hello", 'o'))
