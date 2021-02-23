@@ -22,6 +22,9 @@ const concat = (strings) => {
 }
 
 const getType = (value) => {
+    if (typeof value === 'object') {
+        if (Array.isArray(value)) return 'array'
+    }
     return typeof value
 }
 
