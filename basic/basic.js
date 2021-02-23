@@ -40,6 +40,7 @@ const max3 = (a, b, c) => {
 }
 
 const change = (N, C, K, L) => {
+    console.log(`N: ${N}; C: ${C}; K: ${K}; L:${L}`)
     if (N - K >= 0 && L - C >= 0) return `${N-K}.${L-C}`
     return 'not enough'
 }
