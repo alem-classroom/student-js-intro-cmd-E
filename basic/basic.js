@@ -40,12 +40,15 @@ const max3 = (a, b, c) => {
 }
 
 const change = (N, C, K, L) => {
-    console.log(`N: ${N}; C: ${C}; K: ${K}; L:${L}\n`)
+    // console.log(`N: ${N}; C: ${C}; K: ${K}; L:${L}\n`)
     if (K - N >= 0 && L - C >= 0) {
-        console.log(`Answer: $${K-N}.${L-C}\n`)
+        // console.log(`Answer: $${K-N}.${L-C}\n`)
+        if (K-N === 0 && L-C === 1) {
+            console.log(`N: ${N}; C: ${C}; K: ${K}; L:${L}\n`)
+        }
         return `$${K-N}.${L-C}`
     }
-    console.log(`Answer: 'not enough'\n`)
+    // console.log(`Answer: 'not enough'\n`)
     return 'not enough'
 }
 
@@ -92,3 +95,8 @@ module.exports = {
     fizzbuzz,
     countChar
 }
+
+console.log(change(5, 5, 6, 5))
+console.log(change(2, 17, 2, 18))
+console.log(change(2, 17, 2, 16))
+
